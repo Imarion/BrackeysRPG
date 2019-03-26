@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19f5fb18c0eecb1468f0f6725a72fff6, type: 3}
-  m_Name: Helmet of Protection
+  m_Name: Platelegs
   m_EditorClassIdentifier: 
-  name: Helmet of Protection
-  icon: {fileID: 21300000, guid: cfd132158382a914db72360641c46f2a, type: 3}
+  name: Platelegs
+  icon: {fileID: 21300000, guid: 50d7e59b919b52c4daab57cc8a48d448, type: 3}
   isDefaultItem: 0
-  equipSlot: 0
+  equipSlot: 2
+  mesh: {fileID: 1108467543162620796, guid: 22653855b8f9e634dbf6cbda10680113, type: 3}
+  coveredMeshRegions: 00000000
   armorModifier: 3
   damageModifier: 0
