@@ -7076,6 +7076,7 @@ GameObject:
   - component: {fileID: 1864312311}
   - component: {fileID: 1864312314}
   - component: {fileID: 1864312313}
+  - component: {fileID: 1864312315}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -7194,6 +7195,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 4
   interactionTransform: {fileID: 1864312310}
+--- !u!114 &1864312315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864312307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d153f5954b9c64b83190c4ef8be180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!1001 &1866406841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8047,6 +8062,20 @@ MonoBehaviour:
     baseValue: 5
   armor:
     baseValue: 0
+--- !u!114 &2072165675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072165673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d153f5954b9c64b83190c4ef8be180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!1 &2083484668
 GameObject:
   m_ObjectHideFlags: 0
