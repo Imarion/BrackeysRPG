@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerAnimator : CharacterAnimator
 {
-
+    public WeaponAnimations[] weaponAnimations;
+    Dictionary<Equipment, AnimationClip[]> weaponAnimationsDict;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -12,24 +13,42 @@ public class PlayerAnimator : CharacterAnimator
         base.Start();
 
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+
+        weaponAnimationsDict = new Dictionary<Equipment, AnimationClip[]>();
+        foreach (WeaponAnimations a in weaponAnimations)
+        {
+            weaponAnimationsDict.Add(a.weapon, a.clips);
+        }
     }
 
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem) {
-        if (newItem != null && newItem.equipSlot == EquipmentSlot.Weapon)
+        if (newItem != null && newItem.equipSlot == EquipmentSlot.Weapon) // equip new weapon
         {
             animator.SetLayerWeight(1, 1);
+            if (weaponAnimationsDict.ContainsKey(newItem)) {
+                currentAttackAnimSet = weaponAnimationsDict[newItem];
+            }
         }
-        else if (newItem == null && oldItem != null && oldItem.equipSlot == EquipmentSlot.Weapon) {
+        else if (newItem == null && oldItem != null && oldItem.equipSlot == EquipmentSlot.Weapon) // unquip weapon
+        {
             animator.SetLayerWeight(1, 0);
+            currentAttackAnimSet = defaultAttackAnimSet;
         }
 
-        if (newItem != null && newItem.equipSlot == EquipmentSlot.Shield)
+        if (newItem != null && newItem.equipSlot == EquipmentSlot.Shield) // equip new shield
         {
             animator.SetLayerWeight(2, 1);
         }
-        else if (newItem == null && oldItem != null && oldItem.equipSlot == EquipmentSlot.Shield)
+        else if (newItem == null && oldItem != null && oldItem.equipSlot == EquipmentSlot.Shield) // unquip shield
         {
             animator.SetLayerWeight(2, 0);
         }
+    }
+
+    [System.Serializable]
+    public struct WeaponAnimations
+    {
+        public Equipment weapon;
+        public AnimationClip[] clips;
     }
 }

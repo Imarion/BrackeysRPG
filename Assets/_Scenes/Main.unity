@@ -7374,7 +7374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86018b764dc7aaa4ab842cab3effbd53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 100
   damage:
     baseValue: 5
   armor:
@@ -8348,6 +8348,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c8a4a9f809b5e64986cddb1b60243ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  replaceableAttackAnim: {fileID: 7400014, guid: 73be9633513854604baae3aa06041436,
+    type: 3}
+  defaultAttackAnimSet:
+  - {fileID: 7400014, guid: 73be9633513854604baae3aa06041436, type: 3}
+  weaponAnimations:
+  - weapon: {fileID: 11400000, guid: 81ac419fbb1fe7d42a8708e96050b790, type: 2}
+    clips:
+    - {fileID: 7400016, guid: 73be9633513854604baae3aa06041436, type: 3}
+    - {fileID: 7400018, guid: 73be9633513854604baae3aa06041436, type: 3}
 --- !u!1 &2083484668
 GameObject:
   m_ObjectHideFlags: 0
