@@ -8336,6 +8336,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSpeed: 1
   attackDelay: 0.6
+--- !u!114 &2072165676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072165673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8a4a9f809b5e64986cddb1b60243ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2083484668
 GameObject:
   m_ObjectHideFlags: 0
@@ -8880,7 +8892,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3164609356709159273, guid: 96aad8cd645dba641a5a5cc6abe16064, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 96aad8cd645dba641a5a5cc6abe16064, type: 3}
 --- !u!137 &3164609355833748745 stripped
 SkinnedMeshRenderer:
