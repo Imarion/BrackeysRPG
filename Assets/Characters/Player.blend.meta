@@ -43,6 +43,10 @@ ModelImporter:
     100074: Platelegs
     100076: Shirt
     100078: Shoes
+    100080: Hand_Hold_L
+    100082: Hand_Hold_R
+    100084: Shield
+    100086: Sword
     400000: Armature
     400002: Chest
     400004: Cube
@@ -83,6 +87,10 @@ ModelImporter:
     400074: Platelegs
     400076: Shirt
     400078: Shoes
+    400080: Hand_Hold_L
+    400082: Hand_Hold_R
+    400084: Shield
+    400086: Sword
     4300000: Cube
     4300002: Helmet
     4300004: Platebody
@@ -92,6 +100,8 @@ ModelImporter:
     4300012: Shirt
     4300014: Pants
     4300016: Body
+    4300018: Sword
+    4300020: Shield
     7400000: Default Take
     7400002: Idle
     7400004: Run
@@ -106,6 +116,8 @@ ModelImporter:
     13700012: Platelegs
     13700014: Shirt
     13700016: Shoes
+    13700018: Shield
+    13700020: Sword
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
@@ -113,6 +125,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Black
     second: {fileID: 2100000, guid: 86d130f1ae6a57442b852747b4718373, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blade
+    second: {fileID: 2100000, guid: c5b6252e089887547842605099621264, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blade_highlight
+    second: {fileID: 2100000, guid: ccfbd180b3ef3134583b74dad8595de6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Emblem
+    second: {fileID: 2100000, guid: 19f71e96631d0a2499660feb5ff0577b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -131,6 +158,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Metal_002
+    second: {fileID: 2100000, guid: f247ed0189632504d96c709fcd52d873, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Dark
+    second: {fileID: 2100000, guid: e1529c3c4c44edf43ae783df49bc5562, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Metal_dark
     second: {fileID: 2100000, guid: e1529c3c4c44edf43ae783df49bc5562, type: 2}
   - first:
@@ -138,6 +175,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Pants
     second: {fileID: 2100000, guid: 0e4713502446f3e4f8971ee1474621fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants_001
+    second: {fileID: 2100000, guid: a756ac25e3589f345b8a4e62ae7a8126, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -158,6 +200,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Underclothes
     second: {fileID: 2100000, guid: 3988cb747359804449bc1ba9b94bc3bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Underclothes_001
+    second: {fileID: 2100000, guid: 8730cef78c174e448833aa49d130fd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 6d5528999bfc13241beaa64eb1b54520, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -172,17 +224,26 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Run' has import animation warnings that might
+    animationImportWarnings: "\nClip 'Punch' has import animation warnings that might
       lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
       retargeting quality.\n\t'Chest' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\t'Upper_Leg_L' has scale animation that
-      will be discarded.\n\t'Lower_Leg_L' has scale animation that will be discarded.\n\t'Foot_L'
-      has scale animation that will be discarded.\n\nClip 'Walk' has import animation
-      warnings that might lower retargeting quality:\nNote: Activate translation DOF
-      on avatar to improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'Lower_Leg_L' has scale
-      animation that will be discarded.\n\t'Foot_L' has scale animation that will
-      be discarded.\n"
+      animation that will be discarded.\n\nClip 'Run' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Upper_Leg_L' has scale
+      animation that will be discarded.\n\t'Lower_Leg_L' has scale animation that
+      will be discarded.\n\t'Foot_L' has scale animation that will be discarded.\n\nClip
+      'Sword_atk01' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sword_atk02' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Walk' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Lower_Leg_L'
+      has scale animation that will be discarded.\n\t'Foot_L' has scale animation
+      that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
