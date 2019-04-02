@@ -7404,6 +7404,7 @@ GameObject:
   - component: {fileID: 1864312313}
   - component: {fileID: 1864312315}
   - component: {fileID: 1864312316}
+  - component: {fileID: 1864312317}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -7535,7 +7536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d153f5954b9c64b83190c4ef8be180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackSpeed: 0.7
   attackDelay: 0.6
 --- !u!114 &1864312316
 MonoBehaviour:
@@ -7552,6 +7553,24 @@ MonoBehaviour:
   uiPrefab: {fileID: 5332566214230064731, guid: f4151591d650e5042b51a729ae2dd652,
     type: 3}
   target: {fileID: 2124671047}
+--- !u!114 &1864312317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864312307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1356488df86d6a4d875892687122bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  replaceableAttackAnim: {fileID: 7400014, guid: 73be9633513854604baae3aa06041436,
+    type: 3}
+  defaultAttackAnimSet:
+  - {fileID: 7400002, guid: 9a7bdd0d4aa26954c964e1973a6df76d, type: 3}
+  - {fileID: 7400004, guid: 9a7bdd0d4aa26954c964e1973a6df76d, type: 3}
+  overrideController: {fileID: 22100000, guid: 6ac52bba8b067ed438e20899d924de6c, type: 2}
 --- !u!1001 &1866406841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8497,6 +8516,7 @@ MonoBehaviour:
     type: 3}
   defaultAttackAnimSet:
   - {fileID: 7400014, guid: 73be9633513854604baae3aa06041436, type: 3}
+  overrideController: {fileID: 0}
   weaponAnimations:
   - weapon: {fileID: 11400000, guid: 81ac419fbb1fe7d42a8708e96050b790, type: 2}
     clips:
